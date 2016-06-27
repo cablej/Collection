@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D19282831D21D82F0011CD92 /* CollectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19282821D21D82F0011CD92 /* CollectionHelper.swift */; };
+		D19282851D21D9B00011CD92 /* CreateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19282841D21D9B00011CD92 /* CreateTableViewController.swift */; };
 		D198D10A1D2158D70084D7E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198D1091D2158D70084D7E2 /* AppDelegate.swift */; };
 		D198D10C1D2158D70084D7E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198D10B1D2158D70084D7E2 /* ViewController.swift */; };
 		D198D10F1D2158D70084D7E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D198D10D1D2158D70084D7E2 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D19282821D21D82F0011CD92 /* CollectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHelper.swift; sourceTree = "<group>"; };
+		D19282841D21D9B00011CD92 /* CreateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTableViewController.swift; sourceTree = "<group>"; };
 		D198D1061D2158D70084D7E2 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D198D1091D2158D70084D7E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D198D10B1D2158D70084D7E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				D198D1181D2158D70084D7E2 /* Info.plist */,
 				D198D1101D2158D70084D7E2 /* Collection.xcdatamodeld */,
 				D198D11E1D215B5B0084D7E2 /* ItemCell.swift */,
+				D19282821D21D82F0011CD92 /* CollectionHelper.swift */,
+				D19282841D21D9B00011CD92 /* CreateTableViewController.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 				D198D11F1D215B5B0084D7E2 /* ItemCell.swift in Sources */,
 				D198D10C1D2158D70084D7E2 /* ViewController.swift in Sources */,
 				D198D1121D2158D70084D7E2 /* Collection.xcdatamodeld in Sources */,
+				D19282851D21D9B00011CD92 /* CreateTableViewController.swift in Sources */,
 				D198D10A1D2158D70084D7E2 /* AppDelegate.swift in Sources */,
+				D19282831D21D82F0011CD92 /* CollectionHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +304,7 @@
 				D198D11D1D2158D70084D7E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
