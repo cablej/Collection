@@ -13,6 +13,7 @@
 		D198D1121D2158D70084D7E2 /* Collection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D198D1101D2158D70084D7E2 /* Collection.xcdatamodeld */; };
 		D198D1141D2158D70084D7E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D198D1131D2158D70084D7E2 /* Assets.xcassets */; };
 		D198D1171D2158D70084D7E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D198D1151D2158D70084D7E2 /* LaunchScreen.storyboard */; };
+		D198D11F1D215B5B0084D7E2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198D11E1D215B5B0084D7E2 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D198D1131D2158D70084D7E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D198D1161D2158D70084D7E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D198D1181D2158D70084D7E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D198D11E1D215B5B0084D7E2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D198D1151D2158D70084D7E2 /* LaunchScreen.storyboard */,
 				D198D1181D2158D70084D7E2 /* Info.plist */,
 				D198D1101D2158D70084D7E2 /* Collection.xcdatamodeld */,
+				D198D11E1D215B5B0084D7E2 /* ItemCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D198D11F1D215B5B0084D7E2 /* ItemCell.swift in Sources */,
 				D198D10C1D2158D70084D7E2 /* ViewController.swift in Sources */,
 				D198D1121D2158D70084D7E2 /* Collection.xcdatamodeld in Sources */,
 				D198D10A1D2158D70084D7E2 /* AppDelegate.swift in Sources */,
