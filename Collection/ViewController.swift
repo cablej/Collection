@@ -11,7 +11,7 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource {
     
-    var dataSource: NSManagedObject?
+    var dataSource :[Dictionary<String, String>]?
 
     @IBOutlet var tableView: UITableView!
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.dataSource = self
         
-        dataSource = CollectionHelper.getObject(CollectionHelper.COLLECTION_INDEX)
+        dataSource = CollectionHelper.getObject(CollectionHelper.COLLECTION_INDEX)?.valueForKey("items") as? [Dictionary<String, String>]
         
         self.tableView.reloadData()
         
@@ -31,13 +31,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource!.valueForKey("items")!.count
+        guard let dataSource = dataSource else {
+            return 0
+        }
+        return dataSource.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
-        let item = dataSource!.valueForKey("items")![indexPath.row] as! NSDictionary
-        cell.nameLabel.text = item.valueForKey("name") as? String
+        let item = dataSource![indexPath.row]
+        cell.nameLabel.text = item["name"]
         return cell
     }
 

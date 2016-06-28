@@ -13,6 +13,10 @@ class CollectionHelper: NSObject {
     
     static let COLLECTION_INDEX = 0
     
+    enum SCHEMA_TYPES: String {
+        case String = "String"
+    }
+    
     static let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     class func getObject(index: Int) -> NSManagedObject? {
@@ -23,7 +27,7 @@ class CollectionHelper: NSObject {
                 try managedContext.executeFetchRequest(fetchRequest)
             let data = results as! [NSManagedObject]
             if(data.count == 0) {
-                initializeDatabase(["name": "String", "description": "String"])
+                initializeDatabase([["name": "name", "type": SCHEMA_TYPES.String.rawValue], ["name": "description", "type": SCHEMA_TYPES.String.rawValue]])
             }
             if(index > data.count - 1) {
                 return nil
@@ -39,7 +43,7 @@ class CollectionHelper: NSObject {
         }
     }
     
-    class func initializeDatabase(schema: Dictionary<String, String>) {
+    class func initializeDatabase(schema: [Dictionary<String, String>]) {
         let managedContext = appDelegate.managedObjectContext
         let entity =  NSEntityDescription.entityForName("Class",
                                                         inManagedObjectContext:managedContext)

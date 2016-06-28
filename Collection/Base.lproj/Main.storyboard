@@ -32,7 +32,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwp-az-cpt">
                                                     <rect key="frame" x="8" y="11" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -77,16 +77,16 @@
             </objects>
             <point key="canvasLocation" x="1964" y="285"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Create Table View Controller-->
         <scene sceneID="ePp-HU-GEA">
             <objects>
-                <tableViewController id="Yd2-gB-mD6" sceneMemberID="viewController">
+                <tableViewController id="Yd2-gB-mD6" customClass="CreateTableViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3q-UH-2Fw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pzq-Se-2dt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FormCell" id="pzq-Se-2dt" customClass="FormCell" customModule="Collection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pzq-Se-2dt" id="5Lt-O7-1OB">
@@ -96,19 +96,24 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Field Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-tP-G1i">
                                             <rect key="frame" x="8" y="11" width="86" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-R6-ETd">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-R6-ETd">
                                             <rect key="frame" x="495" y="7" width="97" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="G5f-R6-ETd" firstAttribute="trailing" secondItem="5Lt-O7-1OB" secondAttribute="trailingMargin" constant="8" id="1ov-26-TsS"/>
                                         <constraint firstItem="9Dd-tP-G1i" firstAttribute="leading" secondItem="5Lt-O7-1OB" secondAttribute="leadingMargin" constant="8" id="uQu-I6-mq5"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fieldNameLabel" destination="9Dd-tP-G1i" id="IQq-ch-6uL"/>
+                                    <outlet property="textField" destination="G5f-R6-ETd" id="Sp7-Gr-r5J"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,8 +122,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rjL-51-0tV">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GHx-o0-tTJ"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="gAe-EJ-0su"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GHx-o0-tTJ">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Yd2-gB-mD6" id="ZNU-PU-UBR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="gAe-EJ-0su"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qm-6e-cZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
