@@ -1,6 +1,6 @@
 
 //
-//  CreateTableViewController.swift
+//  ViewTableViewController.swift
 //  Collection
 //
 //  Created by Jack Cable on 6/27/16.
@@ -9,8 +9,9 @@
 
 import UIKit
 
-class CreateTableViewController: UITableViewController {
+class ViewTableViewController: UITableViewController {
     
+    var item: Dictionary<String, AnyObject>?
     var schema: [Dictionary<String, String>]?
     
     override func viewDidLoad() {
@@ -24,16 +25,13 @@ class CreateTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let schema = schema else {
-            return 0
-        }
-        return schema.count
+        return item!.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FormCell") as! FormCell
-        let item = schema![indexPath.row]
-        cell.initializeSchema(item)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ViewCell") as! ViewCell
+        let property = Array(arrayLiteral: item?.values)[indexPath.row] as? AnyObject
+        cell.initializeSchema(property!, schemaToSet: schema![indexPath.row])
         return cell
     }
     
@@ -41,17 +39,4 @@ class CreateTableViewController: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func createButtonTapped(sender: AnyObject) {
-        var object = Dictionary<String, AnyObject>()
-        for cell in tableView.visibleCells {
-            let cell = cell as! FormCell
-            if let value = cell.value() {
-                object[cell.name] = value;
-            } else {
-                object[cell.name] = "";
-            }
-        }
-        CollectionHelper.addItem(object, index: CollectionHelper.COLLECTION_INDEX)
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
 }

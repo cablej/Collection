@@ -20,10 +20,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.dataSource = self
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         dataSource = CollectionHelper.getObject(CollectionHelper.COLLECTION_INDEX)?.valueForKey("items") as? [Dictionary<String, String>]
         
         self.tableView.reloadData()
-        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

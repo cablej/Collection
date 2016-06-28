@@ -36,7 +36,6 @@ class CollectionHelper: NSObject {
             print(data[index].valueForKey("items")!)
             
             return data[index]
-            //                self.addItem(["name": "myItem", "description":"hello"])
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
             return nil
@@ -61,18 +60,18 @@ class CollectionHelper: NSObject {
         }
     }
     
-    class func addItem(properties: Dictionary<String, String>) {
+    class func addItem(properties: Dictionary<String, AnyObject>, index: Int) {
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Class")
         do {
             let results =
                 try managedContext.executeFetchRequest(fetchRequest)
             let data = results as! [NSManagedObject]
-            var items = data[0].valueForKey("items") as! Array<Dictionary<String, String>>
+            var items = data[index].valueForKey("items") as! Array<Dictionary<String, AnyObject>>
             
             items.append(properties)
             
-            data[0].setValue(items, forKey: "items")
+            data[index].setValue(items, forKey: "items")
             try managedContext.save()
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")

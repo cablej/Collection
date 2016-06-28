@@ -20,9 +20,11 @@ class FormCell: UITableViewCell {
     
     func initializeSchema(schemaToSet: Dictionary<String, String>) {
         schema = schemaToSet
-        guard let type = schema["type"], let name = schema["name"] else {
+        guard let typeTemp = schema["type"], let nameTemp = schema["name"] else {
             return
         }
+        type = typeTemp
+        name = nameTemp
         fieldNameLabel.text = name
         if type == CollectionHelper.SCHEMA_TYPES.String.rawValue {
             textField.hidden = false
@@ -33,7 +35,7 @@ class FormCell: UITableViewCell {
         }
     }
     
-    func value() -> String? {
+    func value() -> AnyObject? {
         if type == CollectionHelper.SCHEMA_TYPES.String.rawValue {
             return textField.text
         } else {

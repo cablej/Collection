@@ -17,6 +17,8 @@
 		D198D1141D2158D70084D7E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D198D1131D2158D70084D7E2 /* Assets.xcassets */; };
 		D198D1171D2158D70084D7E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D198D1151D2158D70084D7E2 /* LaunchScreen.storyboard */; };
 		D198D11F1D215B5B0084D7E2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198D11E1D215B5B0084D7E2 /* ItemCell.swift */; };
+		D1AD11861D232FD9005B0AC8 /* ViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD11851D232FD9005B0AC8 /* ViewTableViewController.swift */; };
+		D1AD11881D233034005B0AC8 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD11871D233034005B0AC8 /* ViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D198D1161D2158D70084D7E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D198D1181D2158D70084D7E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D198D11E1D215B5B0084D7E2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D1AD11851D232FD9005B0AC8 /* ViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTableViewController.swift; sourceTree = "<group>"; };
+		D1AD11871D233034005B0AC8 /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			children = (
 				D198D1091D2158D70084D7E2 /* AppDelegate.swift */,
 				D198D10B1D2158D70084D7E2 /* ViewController.swift */,
+				D19282841D21D9B00011CD92 /* CreateTableViewController.swift */,
+				D1AD11851D232FD9005B0AC8 /* ViewTableViewController.swift */,
 				D198D10D1D2158D70084D7E2 /* Main.storyboard */,
 				D198D1131D2158D70084D7E2 /* Assets.xcassets */,
 				D198D1151D2158D70084D7E2 /* LaunchScreen.storyboard */,
@@ -73,8 +79,8 @@
 				D198D1101D2158D70084D7E2 /* Collection.xcdatamodeld */,
 				D198D11E1D215B5B0084D7E2 /* ItemCell.swift */,
 				D19282821D21D82F0011CD92 /* CollectionHelper.swift */,
-				D19282841D21D9B00011CD92 /* CreateTableViewController.swift */,
 				D197DAB11D22A80A0063C69C /* FormCell.swift */,
+				D1AD11871D233034005B0AC8 /* ViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -152,8 +158,10 @@
 			files = (
 				D198D11F1D215B5B0084D7E2 /* ItemCell.swift in Sources */,
 				D198D10C1D2158D70084D7E2 /* ViewController.swift in Sources */,
+				D1AD11861D232FD9005B0AC8 /* ViewTableViewController.swift in Sources */,
 				D197DAB21D22A80A0063C69C /* FormCell.swift in Sources */,
 				D198D1121D2158D70084D7E2 /* Collection.xcdatamodeld in Sources */,
+				D1AD11881D233034005B0AC8 /* ViewCell.swift in Sources */,
 				D19282851D21D9B00011CD92 /* CreateTableViewController.swift in Sources */,
 				D198D10A1D2158D70084D7E2 /* AppDelegate.swift in Sources */,
 				D19282831D21D82F0011CD92 /* CollectionHelper.swift in Sources */,
