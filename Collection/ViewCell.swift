@@ -20,14 +20,21 @@ class ViewCell: UITableViewCell {
     var type = ""
     var name = ""
     
-    func initializeSchema(propertyToSet: AnyObject, schemaToSet: Dictionary<String, String>) {
+    func initializeProperty(propertyToSet: AnyObject, schemaToSet: Dictionary<String, String>) {
         property = propertyToSet
         schema = schemaToSet
+        if let nameFromSchema = schemaToSet["name"], let typeFromSchema = schemaToSet["type"] {
+            name = nameFromSchema
+            type = typeFromSchema
+        }
+        
         fieldNameLabel.text = name
+        
         if type == CollectionHelper.SCHEMA_TYPES.String.rawValue {
             valueLabel.hidden = false
-            valueLabel.text = propertyToSet as! String
+            valueLabel.text = propertyToSet as? String
         } else {
+            valueLabel.hidden = true
         }
     }
     

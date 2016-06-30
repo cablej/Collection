@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="gy5-bI-YbT" customClass="ItemCell" customModule="Collection" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ItemCell" id="gy5-bI-YbT" customClass="ItemCell" customModule="Collection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gy5-bI-YbT" id="QNF-Ni-EQM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwp-az-cpt">
@@ -43,6 +43,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="Nwp-az-cpt" id="5v8-5i-N3t"/>
+                                            <segue destination="OBB-Pp-erY" kind="show" id="e2g-6x-fLm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -132,7 +133,7 @@
                                 <action selector="cancelButtonTapped:" destination="Yd2-gB-mD6" id="ZNU-PU-UBR"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="gAe-EJ-0su">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gAe-EJ-0su">
                             <connections>
                                 <action selector="createButtonTapped:" destination="Yd2-gB-mD6" id="YUn-r8-tMW"/>
                             </connections>
@@ -153,7 +154,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewCell" id="DaI-Dm-Zgf" customClass="ViewCell" customModule="Collection" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DaI-Dm-Zgf" id="Q8W-GO-7nW">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -191,14 +192,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="yA7-5t-y96">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uIj-DE-60H">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="2kg-Xh-1tp">
                             <connections>
-                                <action selector="cancelButtonTapped:" destination="OBB-Pp-erY" id="yrt-RH-56m"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="2kg-Xh-1tp">
-                            <connections>
-                                <action selector="createButtonTapped:" destination="OBB-Pp-erY" id="h90-kZ-vgS"/>
+                                <segue destination="Nd5-Fg-IKJ" kind="presentation" id="FjM-SN-rXj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -262,4 +258,7 @@
             <point key="canvasLocation" x="2659" y="285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FjM-SN-rXj"/>
+    </inferredMetricsTieBreakers>
 </document>

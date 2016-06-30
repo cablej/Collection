@@ -45,4 +45,10 @@ class FormCell: UITableViewCell {
         }
     }
     
+    func initializeValue(value: AnyObject?) {
+        if type == CollectionHelper.SCHEMA_TYPES.String.rawValue {
+            textField.text = value as? String
+        } else {
+        }
+    }
 }
